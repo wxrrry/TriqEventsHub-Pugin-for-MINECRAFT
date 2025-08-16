@@ -1,0 +1,173 @@
+# TRIQ Events Hub Configuration
+
+# Настройки базы данных
+database:
+  type: "sqlite" # sqlite или mysql
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "triq_events"
+    username: "root"
+    password: "password"
+  sqlite:
+    file: "plugins/TRIQEventsHub/database.db"
+
+# Настройки ивентов
+events:
+  # Интервал между ивентами (в минутах)
+  interval: 30
+  # Длительность ивента (в минутах)
+  duration: 10
+  # Минимальное количество игроков для запуска ивента
+  min_players: 2
+  # Максимальное количество игроков в ивенте
+  max_players: 20
+  
+  # Типы ивентов
+  types:
+    pvp:
+      enabled: true
+      name: "PvP Арена"
+      description: "Сразитесь с другими игроками!"
+      min_players: 2
+      max_players: 16
+      rewards:
+        participation: 10
+        winner: 50
+        second_place: 30
+        third_place: 20
+    
+    puzzle:
+      enabled: true
+      name: "Головоломка"
+      description: "Решите сложную головоломку!"
+      min_players: 1
+      max_players: 8
+      rewards:
+        participation: 8
+        winner: 40
+        second_place: 25
+        third_place: 15
+
+# Настройки валюты
+currency:
+  name: "Event Coins"
+  symbol: "⚡"
+  # Начальное количество валюты для новых игроков
+  starting_amount: 0
+  # Максимальное количество валюты
+  max_amount: 999999
+
+# Настройки магазина
+shop:
+  # Категории товаров
+  categories:
+    statues:
+      name: "Статуи в Зале славы"
+      icon: "DIAMOND_BLOCK"
+      items:
+        basic_statue:
+          name: "Базовая статуя"
+          description: "Простая статуя в Зале славы"
+          price: 100
+          material: "STONE"
+          lore:
+            - "&7Разместите свою статую"
+            - "&7в Зале славы!"
+    
+    particles:
+      name: "Эффекты частиц"
+      icon: "FIREWORK_ROCKET"
+      items:
+        fire_trail:
+          name: "Огненный след"
+          description: "Оставляйте огненный след за собой"
+          price: 200
+          material: "BLAZE_POWDER"
+          lore:
+            - "&6Огненный след"
+            - "&7За вами будет тянуться огонь!"
+    
+    titles:
+      name: "Уникальные титулы"
+      icon: "NAME_TAG"
+      items:
+        event_champion:
+          name: "Чемпион ивентов"
+          description: "Титул для победителей"
+          price: 500
+          material: "GOLDEN_CROWN"
+          lore:
+            - "&6Чемпион ивентов"
+            - "&7Покажите всем свою силу!"
+    
+    skins:
+      name: "Скины персонажа"
+      icon: "PLAYER_HEAD"
+      items:
+        hero_skin:
+          name: "Скин героя"
+          description: "Уникальный скин героя"
+          price: 300
+          material: "DIAMOND_CHESTPLATE"
+          lore:
+            - "&bСкин героя"
+            - "&7Выделитесь среди других!"
+
+# Настройки scoreboard
+scoreboard:
+  enabled: true
+  title: "&6&lTRIQ Events"
+  lines:
+    - "&7"
+    - "&fВалюта: &e%currency%"
+    - "&7"
+    - "&fПобеды: &a%wins%"
+    - "&fУчастия: &b%participations%"
+    - "&7"
+    - "&fСледующий ивент:"
+    - "&e%next_event%"
+    - "&7"
+    - "&eplay.triq.com"
+
+# Настройки уведомлений
+notifications:
+  # Уведомления в чате
+  chat:
+    event_start: "&6&l[Ивенты] &eИвент &a%event_name% &eначался! Присоединяйтесь!"
+    event_end: "&6&l[Ивенты] &eИвент &a%event_name% &eзавершен! Победитель: &a%winner%"
+    event_cancelled: "&6&l[Ивенты] &cИвент отменен из-за недостатка игроков"
+  
+  # Уведомления в action bar
+  actionbar:
+    enabled: true
+    event_active: "&6&lИвент активен! &e%event_name%"
+    currency_gained: "&a+%amount% Event Coins"
+
+# Настройки достижений
+achievements:
+  first_win:
+    name: "Первая победа"
+    description: "Выиграйте свой первый ивент"
+    reward: 100
+  event_master:
+    name: "Мастер ивентов"
+    description: "Выиграйте 10 ивентов"
+    reward: 500
+  rich_player:
+    name: "Богач"
+    description: "Накопите 1000 Event Coins"
+    reward: 200
+
+# Настройки сезонов
+seasons:
+  enabled: true
+  # Длительность сезона в днях
+  duration_days: 30
+  # Сброс статистики при смене сезона
+  reset_stats: false
+  # Специальные награды за сезон
+  season_rewards:
+    top_1: 1000
+    top_2: 500
+    top_3: 250

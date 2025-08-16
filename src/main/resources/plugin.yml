@@ -1,0 +1,66 @@
+name: TRIQEventsHub
+version: 1.0.0
+main: com.triq.eventshub.TriqEventsHub
+api-version: '1.20'
+authors: [wxrrry x TRIQ x ESLL]
+description: Уникальная система ивентов для Minecraft хаба с собственной валютой и магазином
+website: https://t.me/triqnews
+
+commands:
+  eventadmin:
+    description: Административные команды для управления ивентами
+    usage: /eventadmin <start|stop|join|leave|status|participants|reload> [тип] [название] [время]
+    permission: triq.eventadmin.use
+    permission-message: У вас нет прав для использования этой команды!
+  eventjoin:
+    description: Присоединиться к активному ивенту
+    usage: /eventjoin
+    permission: triq.eventjoin.use
+    permission-message: У вас нет прав для использования этой команды!
+  eventleave:
+    description: Покинуть активный ивент
+    usage: /eventleave
+    permission: triq.eventleave.use
+    permission-message: У вас нет прав для использования этой команды!
+  eventshop:
+    description: Открыть магазин ивентной валюты
+    usage: /eventshop
+    permission: triq.eventshop.use
+    permission-message: У вас нет прав для использования этой команды!
+  eventstats:
+    description: Показать статистику игрока
+    usage: /eventstats [игрок]
+    permission: triq.eventstats.use
+    permission-message: У вас нет прав для использования этой команды!
+
+permissions:
+  triq.eventadmin.use:
+    description: Позволяет использовать административные команды ивентов
+    default: op
+  triq.eventadmin.reload:
+    description: Позволяет перезагружать конфигурацию
+    default: op
+  triq.eventadmin.currency:
+    description: Позволяет управлять валютой игроков
+    default: op
+  triq.eventadmin.auto:
+    description: Позволяет управлять автоматическими ивентами
+    default: op
+  triq.eventadmin.zone:
+    description: Позволяет управлять зонами ивентов
+    default: op
+  triq.eventjoin.use:
+    description: Позволяет присоединяться к ивентам
+    default: true
+  triq.eventleave.use:
+    description: Позволяет покидать ивенты
+    default: true
+  triq.eventshop.use:
+    description: Позволяет использовать магазин
+    default: true
+  triq.eventstats.use:
+    description: Позволяет просматривать статистику
+    default: true
+  triq.eventstats.others:
+    description: Позволяет просматривать статистику других игроков
+    default: op
