@@ -1,5 +1,6 @@
 com\triq\eventshub\events\EventManager.class
 com\triq\eventshub\events\PvPEvent.class
+com\triq\eventshub\events\DynamicParkourEvent.class
 com\triq\eventshub\commands\EventShopCommand.class
 com\triq\eventshub\managers\AutoEventManager$ScheduledEvent.class
 com\triq\eventshub\events\AbstractEvent$1.class
@@ -24,3 +25,4 @@ com\triq\eventshub\utils\ConfigManager.class
 com\triq\eventshub\events\EventManager$1.class
 com\triq\eventshub\managers\StatsManager$PlayerStats.class
 com\triq\eventshub\events\EventManager$3.class
+com\triq\eventshub\events\DynamicParkourEvent$1.class

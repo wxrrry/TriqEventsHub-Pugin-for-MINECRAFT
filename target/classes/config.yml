@@ -48,6 +48,18 @@ events:
         winner: 40
         second_place: 25
         third_place: 15
+    
+    dynamic_parkour:
+      enabled: true
+      name: "Динамический паркур"
+      description: "Блоки появляются перед вами! Пройдите как можно дальше!"
+      min_players: 1
+      max_players: 10
+      rewards:
+        participation: 5
+        winner: 50
+        second_place: 25
+        third_place: 15
 
 # Настройки валюты
 currency:

@@ -7,6 +7,7 @@ E:\work\PIVOMINE\plug\TRIQLobby\src\main\java\com\triq\eventshub\managers\Curren
 E:\work\PIVOMINE\plug\TRIQLobby\src\main\java\com\triq\eventshub\events\EventManager.java
 E:\work\PIVOMINE\plug\TRIQLobby\src\main\java\com\triq\eventshub\events\SnowFightEvent.java
 E:\work\PIVOMINE\plug\TRIQLobby\src\main\java\com\triq\eventshub\commands\EventAdminCommand.java
+E:\work\PIVOMINE\plug\TRIQLobby\src\main\java\com\triq\eventshub\events\DynamicParkourEvent.java
 E:\work\PIVOMINE\plug\TRIQLobby\src\main\java\com\triq\eventshub\commands\EventLeaveCommand.java
 E:\work\PIVOMINE\plug\TRIQLobby\src\main\java\com\triq\eventshub\commands\EventStatsCommand.java
 E:\work\PIVOMINE\plug\TRIQLobby\src\main\java\com\triq\eventshub\events\EventTypes.java
